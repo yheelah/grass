@@ -46,9 +46,9 @@ def save_proxy7(proxy_list_url, output_file, max_proxies=2000):
                     if result:
                         proxy7.append(result)
             random_proxy7 = random.sample(proxy7, min(355, len(proxy7)))
-            with open(output_file, 'w') as f:
+            with open(output_file, 'w') :
                 for proxy in random_proxy7:
-                    f.write({proxy}\n")
+                    write({proxy}\n")
             return random_proxy7
         else:
             logger.error(f"Gagal ngambil daftar proxy dari {proxy_list_url}. Kode status: {response.status_code}")
