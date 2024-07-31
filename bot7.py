@@ -46,9 +46,9 @@ def save_proxy7(proxy_list_url, output_file, max_proxies=2000):
                     if result:
                         proxy7.append(result)
             random_proxy7 = random.sample(proxy7, min(355, len(proxy7)))
-            with open(output_file, 'w') :
+            with open(output_file, 'w') as f:
                 for proxy in random_proxy7:
-                    write({proxy}\n")
+                    f.write(f"{proxy}\n") 
             return random_proxy7
         else:
             logger.error(f"Gagal ngambil daftar proxy dari {proxy_list_url}. Kode status: {response.status_code}")
@@ -56,7 +56,7 @@ def save_proxy7(proxy_list_url, output_file, max_proxies=2000):
     except Exception as e:
         logger.error(f"Error terjadi pas ambil atau proses daftar proxy dari {proxy_list_url}: {e}")
         return []
-
+        
 def log_reputation(proxy, completeness, consistency, timeliness, availability):
     logger.info(f"Proxy: {proxy}, Kecompletan: {completeness}, Konsistensi: {consistency}, Waktu tepat: {timeliness}, Ketersediaan: {availability}")
 
