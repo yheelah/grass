@@ -1,0 +1,6 @@
+requests
+websockets
+fake-useragent
+loguru
+schedule
+websockets_proxy
