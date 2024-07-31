@@ -15,7 +15,7 @@ import base64
 test_url = 'https://www.google.com'
 output_file = 'proxy7.txt'
 user_ids_file = 'users.txt'
-proxy_list_url = 'https://raw.githubusercontent.com/yheelah/grass/main/proxy.txt'
+proxy_list_url = 'https://raw.githubusercontent.com/ProxyScraper/ProxyScraper/main/socks5.txt'
 
 def check_proxy(proxy):
     try:
